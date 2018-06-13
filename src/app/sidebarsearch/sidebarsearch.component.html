@@ -1,0 +1,17 @@
+<div>
+  <div class="input-group">
+      <input  type="text" name="addinputtext" class="form-control" list="search-input-list" 
+      placeholder="Select users" 
+        autocomplete="off" #input2 [(ngModel)]='addinputtext' />
+      <datalist id="search-input-list">
+        <ng-container *ngFor="let data of users">
+          <option value={{data.username}}>
+        </ng-container>
+      </datalist>
+    <div align="center" >
+      <button type="submit" class="btn btn-warning" type="button" (click)="onClick(input2.value)" >
+        ADD
+      </button>
+    </div>
+  </div>
+</div>

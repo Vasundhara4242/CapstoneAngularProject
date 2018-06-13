@@ -1,0 +1,16 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div>
+    <H4 style="color: rgb(54, 21, 241); text-align: center">Add Users to the Circle</H4>
+    <app-sidebarsearch (addinput)="onClicked($event)"></app-sidebarsearch>
+    <p></p>
+    <ul *ngFor="let data of usercircle"
+    class="list-unstyled">
+      <li>
+        <button type="button" class="upper btn btn-success btn-block ">{{data}}</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create circle form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" >
+  <h2>Create New Circle Form</h2>
+  <form method="post" #form = "ngForm" (ngSubmit)= "createCircle(form)">
+    <div class="form-group">
+      <label for="circle">New Circle Name:</label>
+      <input style="width:400px;max-width:400px" class="form-control" id="email" placeholder=" Please enter the Circle Name" name="circle" ngModel>
+    
+      
+    </div>
+    <button type="submit" class="btn btn-success">Add</button>
+    
+  </form>
+</div>
+
+</body>
+</html>

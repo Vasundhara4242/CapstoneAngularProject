@@ -1,0 +1,51 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+  
+  div.messageblock {
+    height: 90%;
+    overflow: scroll;
+  }
+
+  h1 {
+    text-align: center;
+  }
+</style>
+<div class="messageblock">
+
+  
+  <div *ngIf="type==='circle'">
+      <h1 align="center">
+          <b class="upper" style="color: rgb(25, 0, 255);" onclick="openNav()"> {{ Messagename }} </b>
+        </h1>
+  </div>
+  <div *ngIf="type==='User'">
+      <h1 align="center">
+          <b class="upper" style="color: rgb(25, 0, 255);"> {{ Messagename }}  </b>
+           <button type="button" class="btn btn-primary" > {{status}}</button> 
+        </h1>
+  </div>
+  <h4>
+    <ul *ngFor="let message of messages">
+
+      <!-- <li style="list-style:none">{{message.senderName}} to {{message.receiverId}}</li> -->
+       {{message.message}}
+      <!-- <li style="list-style:none">Date: {{message.postedDate}}</li> -->
+    </ul>
+  </h4>
+
+</div>
+<app-sidebar [sidebarObj]="outmessageObj"></app-sidebar>
+<!-- [(ngModel)]='message' -->
+<div class="input-group" >
+   <input type="text" class="form-control" placeholder="@Messages" name="message" [(ngModel)]='message'>
+  <div class="input-group-btn">
+    <button (click)="onClick(message, type)" class="btn btn-default" type="button">
+      <i class="glyphicon glyphicon-send"></i>
+    </button>
+  </div>
+</div>
+

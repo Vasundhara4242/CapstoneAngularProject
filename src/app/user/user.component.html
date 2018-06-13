@@ -1,0 +1,20 @@
+
+
+<h1>Friends</h1>
+
+<h2>
+    <div class="scrollbar scrollbar-primary">
+        <div class="force-overflow">
+
+  <ul *ngFor="let user of users"
+  (click)=selectUser(user.username)>
+  <button type="button" class="btn btn-primary" id="user">
+ {{user.username}}
+</button>
+</ul>
+
+</div>
+
+</div>
+</h2> 
+
