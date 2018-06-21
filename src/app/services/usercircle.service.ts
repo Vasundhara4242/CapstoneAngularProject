@@ -17,7 +17,7 @@ export class UserCircleService {
     }
 
     getusers(circlename: string) {
-        this.ApiUrl = 'usercircle/';
+        this.ApiUrl = '/api/usercircle/';
         this.GETUSERCIRCLEDATA = this.USERCIRCLE_SERVICE_BASE_URL + this.ApiUrl;
         console.log("In service get user");
         console.log("header", this.headerObj);
@@ -25,7 +25,7 @@ export class UserCircleService {
     }
 
     putusers(usercircle: SIDEBAR) {
-        this.ApiUrl = 'usercircle/';
+        this.ApiUrl = '/api/usercircle/';
         this.ServerWithApiUrl =
             this.USERCIRCLE_SERVICE_BASE_URL + this.ApiUrl;
         console.log("In service");

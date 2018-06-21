@@ -1,20 +1,34 @@
 
 
-<h1>Groups</h1>
-<button class="btn" id="success" type="submit" (click)="createCircle()">New Circle</button>
-<h2>
-  
+<h1>Circles</h1>
+<!--<button class="btn" id="success" type="submit" (click)="createCircle()">New Circle</button>-->
+<!--
+
   <div class="scrollbar scrollbar-primary">
       <div class="force-overflow">
-
-  <ul *ngFor="let circle of circles"
-  (click)=selectCircle(circle)> 
+<ul>
+  <li *ngFor="let circle of circles" (click)="selectCircle(circle.circleName)">
   <button type="button" class="btn btn-primary" id="circle">
-    {{circle}} 
+    {{circle.circleName}}
   </button>
- 
-</ul>  
+</li>
+</ul>
       </div>
   </div>
+-->
 
-</h2> 
+
+<div class = 'column'>
+<div class = 'circle'>
+	<ul>
+	<li *ngFor = "let circle of circles" (click)="selectCircle(circle.circleName)">
+	{{circle.circleName}}
+	</li>
+	</ul>
+</div>
+</div>
+
+
+
+
+

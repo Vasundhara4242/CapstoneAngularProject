@@ -33,7 +33,7 @@ import { UserCircleService } from './services/usercircle.service';
     DashboardComponent,
     CreateCircleComponent,
     SidebarComponent,
-    SidebarsearchComponent    
+    SidebarsearchComponent
   ],
   imports: [
     RouterModule.forRoot([
@@ -41,17 +41,18 @@ import { UserCircleService } from './services/usercircle.service';
       { path: 'register', component:RegistrationComponent },
       { path: 'dashboard', component:(localStorage.getItem('token') === null) ? LoginComponent:DashboardComponent },
       // { path: 'dashboard', component:DashboardComponent }
-      {
+  /*    {
         path: 'createCircle',
         component : CreateCircleComponent
-      } 
+      } */
     ]),
-    
+
     BrowserModule,
     HttpModule,
     FormsModule
   ],
   providers: [UserService,CircleService,MessageService,UserCircleService],
+//providers: [UserService,CircleService,MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,13 +6,13 @@ import { Http, Headers } from '@angular/http';
 
 export class UserService {
     constructor(private http: Http) { }
-    private USER_SERVICE_BASE_URL = 'http://localhost:8082/api/user';
+    private USER_SERVICE_BASE_URL = 'http://localhost:8087/api/user';
 
-    private CREATEUSER = 'http://localhost:8082/user/';
-    private AUTHENTICATE = 'http://localhost:8082/login/';
+    private CREATEUSER = 'http://localhost:8087/user/';
+    private AUTHENTICATE = 'http://localhost:8083/login/';
 
     headerObj = new Headers({
-        "Authorization" : 'Bearer '+ localStorage.getItem('token') 
+        "Authorization" : 'Bearer '+ localStorage.getItem('token')
     });
     getUsers()
     {

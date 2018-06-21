@@ -3,7 +3,7 @@ import {NgForm} from '@angular/forms';
 import {CircleService} from '../services/circle.service';
 
 import {Router} from '@angular/router';
-import { circle } from '../circle/circle';
+import { Circle } from '../circle/circle';
 @Component({
   selector: 'app-create-circle',
   templateUrl: './create-circle.component.html',
@@ -12,11 +12,11 @@ import { circle } from '../circle/circle';
 export class CreateCircleComponent implements OnInit {
 
   constructor(private circleService:CircleService,private router:Router) { }
-  circleObj:circle
+  circleObj:Circle
   createCircle(form:any)
  {
       console.log("Circle  Object from "+form.value);
-      this.circleObj= new circle();
+      this.circleObj= new Circle();
       this.circleObj.circleName=form.value.circle;
       this.circleObj.creatorId=localStorage.getItem("username");
       console.log("Circle object created"+this.circleObj);

@@ -1,13 +1,17 @@
-.scrollbar {
+
+/*.scrollbar {
     height: 150px;
     background: #D3D3D3;
     overflow-y: scroll;
     margin-bottom: 25px;
   }
+*/
+
+/*
   .force-overflow {
     min-height: 200px;
   }
-  
+
   .scrollbar-primary::-webkit-scrollbar {
   width: 10px;
   background-color: #F5F5F5; }
@@ -15,8 +19,8 @@
   .scrollbar-primary::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: rgb(20, 105, 233) }
-    
-  
+
+
   .scrollbar-danger::-webkit-scrollbar-track {
     background-color: #F5F5F5;
     border-radius: 10px; }
@@ -29,5 +33,24 @@
       font-size: 13px;
       cursor: pointer;
   }
-  
-  
+*/
+.column{
+	float: left;
+	padding: 20px;
+	height: 520px;
+}
+.circle ul{
+	list-style-type: disc;
+	margin: 0%;
+	padding: 0%;
+}
+.circle li{
+	padding: 8px;
+	margin-bottom: 8px;
+	background-color: cadetblue;
+	color: blue;
+}
+
+.circle li:hover{
+	background-color: brown;
+}

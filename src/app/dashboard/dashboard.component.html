@@ -36,9 +36,16 @@
     <div id="circleDiv" style="height: 55%;">
 
                            
-      <app-circle (selectedCircle)="onSelect($event)"></app-circle>
+     <app-circle (selectedCircle)="onSelect($event)"></app-circle>
+
    
     </div>
+    
+  </div>
+
+<div style="display: flex;">
+  <div id="leftSideBar" class="section">
+    
     <div id="userDiv" style="height: 50%;">
 
       <app-user (selectedUser)="onSelect($event)"></app-user>
@@ -53,5 +60,5 @@
 
 </div>
 <footer class="navbar-fixed-bottom" style="text-align: center;">
-  <p>&copy; all rights reserved</p>
+  <p>Slack</p>
 </footer>

@@ -23,7 +23,9 @@ export class LoginComponent implements OnInit {
       data => {
         if (data.status === 200) {
           console.log("inside navigate to dashboard");
-          this.router.navigate(['/dashboard']);
+         this.router.navigate(['/dashboard']);
+        //  this.router.navigate(['http://localhost:4200']);
+
           location.reload();
           localStorage.setItem('token', data.json().token);
           localStorage.setItem('username', form.value.username);
