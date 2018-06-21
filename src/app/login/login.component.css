@@ -1,10 +1,11 @@
 .container {
-    padding: 25px;
+    padding: 100px;
     position: fixed;
     margin: 0;
     width: 100%;
     color: white;
-    background-color: rgb(0, 191, 255);	
+height: 80%;
+    background-color: white;	
 }
 
  footer {
@@ -12,9 +13,13 @@
     margin: 0;
     width: 100%;
     color: white;
-    background-color: rgb(43, 107, 224);
+    background-color: rgb(255, 102, 255);
     text-align: center;
     font-style: oblique;
     font-variant: small-caps;
 }
 
+.form-group{
+
+color : rgb(255,128,0);
+}
