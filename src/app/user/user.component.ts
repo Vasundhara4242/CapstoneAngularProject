@@ -13,23 +13,32 @@ import { DatePipe } from '@angular/common/src/pipes/date_pipe';
 export class UserComponent implements OnInit {
 
   users:User[];
-  
+  statuses:User[];
+
   @Output() selectedUser = new EventEmitter<any>();
-  
+
   constructor(private userservice:UserService) { }
 
 
   selectUser(userdata:string)
   {
     console.log('User name' , userdata);
+    console.log('Status' ,status);
 
     let currentUserName = {
-      type: 'User', 
+      type: 'User',
       value:userdata
     };
-    this.selectedUser.emit(currentUserName);
+      this.selectedUser.emit(currentUserName);
+
+      let currentStatus = {
+        type : 'User',
+        value:userdata
+      };
+
   }
-  
+
+
 getUsers()
 {
   console.log("inside user component");
@@ -38,18 +47,17 @@ getUsers()
   });
 }
 
-  // getUsers()
-  // {
-  //   this.users=this.userservice.getUsers();
-  // }
-
- 
-
-
-  ngOnInit() {
-    // let user = new User();
-    // this.users = user.getuser();
+ngOnInit() {
     this.getUsers();
-  }
 
+  }
+/*
+getStatus()
+{
+  console.log("inside new status component");
+  this.userservice.getStatus().subscribe(data =>{
+    this.statuses = data.json();
+  });
+}
+*/
 }

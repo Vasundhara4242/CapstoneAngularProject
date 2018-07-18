@@ -31,4 +31,24 @@ export class UserCircleService {
         console.log("In service");
         return this.http.put(this.ServerWithApiUrl + 'addToCircle/' + usercircle.username + '/' + usercircle.circlename,usercircle, { headers: this.headerObj });
     }
+
+    getstatus(status: string) {
+        this.ApiUrl = '/api/usercircle/';
+        this.GETUSERCIRCLEDATA = this.USERCIRCLE_SERVICE_BASE_URL + this.ApiUrl;
+        console.log("In service get user");
+        console.log("header", this.headerObj);
+        return this.http.get(this.GETUSERCIRCLEDATA + 'searchByCircle/' + status + '/', { headers: this.headerObj });
+    }
+
+    putstatus(status: SIDEBAR) {
+        this.ApiUrl = '/api/usercircle/';
+        this.ServerWithApiUrl =
+            this.USERCIRCLE_SERVICE_BASE_URL + this.ApiUrl;
+        console.log("In service");
+        return this.http.put(this.ServerWithApiUrl + 'addToCircle/' + status + '/' + status, { headers: this.headerObj });
+    }
+
+
+
+
 }

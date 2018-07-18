@@ -1,6 +1,6 @@
 
 
-<h1>Friends</h1>
+<h1>Users</h1>
 
 <h2>
     <div class="scrollbar scrollbar-primary">
@@ -8,13 +8,14 @@
 
   <ul *ngFor="let user of users"
   (click)=selectUser(user.username)>
-  <button type="button" class="btn btn-primary" id="user">
+
+<button type="button" class="btn btn-primary" id="user">
  {{user.username}}
 </button>
+
+
 </ul>
-
 </div>
 
 </div>
-</h2> 
-
+</h2>

@@ -10,7 +10,7 @@
         <option value="AWAY">AWAY</option>
         <option value="MEETING">MEETING</option>
       </select>
-
+<!--<div> Status{{username}} : {{selectedValue}} </div>-->
     </div>
   </div>
 
@@ -35,17 +35,17 @@
   <div id="leftSideBar" class="section">
     <div id="circleDiv" style="height: 55%;">
 
-                           
+
      <app-circle (selectedCircle)="onSelect($event)"></app-circle>
 
-   
+
     </div>
-    
+
   </div>
 
 <div style="display: flex;">
   <div id="leftSideBar" class="section">
-    
+
     <div id="userDiv" style="height: 50%;">
 
       <app-user (selectedUser)="onSelect($event)"></app-user>

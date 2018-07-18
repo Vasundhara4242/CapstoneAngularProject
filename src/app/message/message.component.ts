@@ -26,17 +26,18 @@ outmessageObj:object;
 
  @Input() messageObj:object;
 
+
   constructor(private messageservice:MessageService,private userService: UserService) { }
 
   getMessages()
   {
-    
+
   }
 
 
   ngOnInit() {
   //  let message = new Message();
-  //   this.message = message.getmessage(); 
+  //   this.message = message.getmessage();
     this.getMessages();
   }
 
@@ -57,7 +58,8 @@ outmessageObj:object;
         this.userService.getStatus(value.messageObj.currentValue.value).subscribe(
           data=>
           {
-            this.status =data.text();
+            this.status =data.json();
+
            console.log("Status: "+ status);
           }
         );
@@ -117,7 +119,7 @@ outmessageObj:object;
           }
         )
        }
-      
+
     }
 
   }

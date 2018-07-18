@@ -5,6 +5,7 @@ export class User {
     name:string;
     password:string;
     status:string;
+  statuses:object[];
     users:object[];
 
     constructor()
@@ -15,5 +16,10 @@ export class User {
     getuser()
     {
         return this.users;
+    }
+
+    getstatus()
+    {
+      return this.status;
     }
 }
